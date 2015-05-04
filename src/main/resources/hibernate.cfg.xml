@@ -19,13 +19,15 @@
         <property name="current_session_context_class">thread</property>
 
         <!-- Disable the second-level cache -->
-        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <!--<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>-->
 
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
 
         <mapping class="chap01.crud.Member" />
+        <mapping class="chap04.BoardArticle" />
     </session-factory>
 
 </hibernate-configuration>
